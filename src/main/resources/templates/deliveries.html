@@ -1,0 +1,34 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<div th:insert="Header.html"></div>
+<body>
+    <div class="form-inline" style="padding-bottom: 20px">
+        <div class="py-5 text-center" style="padding-right: 50px">
+            <h2>Сводная информация по поставкам за период</h2>
+        </div>
+        <a href="/">Перейти к регистрации поставки</a>
+    </div>
+    <div class="form-inline" style="padding-bottom: 20px">
+        <div class="form-inline" style="margin-right: 10px">
+            <label for="start_date" style="margin-left: 10px;margin-right: 10px"> с </label>
+            <input type="date" class="form-control" id="start_date">
+        </div>
+        <div class="form-inline" style="margin-right: 10px">
+            <label for="end_date" style="margin-right: 10px"> по </label>
+            <input type="date" class="form-control" id="end_date">
+        </div>
+        <div style="padding-left: 30px">
+            <button id="apply_button" class="btn btn-primary btn-lg">Применить</button>
+        </div>
+    </div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Товары\Продавцы</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <script th:insert="js/deliveriesReportScript.js"></script>
+</body>
+</html>
